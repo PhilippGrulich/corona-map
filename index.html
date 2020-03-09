@@ -32,10 +32,8 @@
             <style>
                 #map {
                     position: relative;
-                    width: 100.0%;
-                    height: 100.0%;
-                    left: 0.0%;
-                    top: 0.0%;
+                    height: 90vh;  
+                    width: 100%;  
                 }
 
                 .info {
@@ -92,7 +90,27 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div style="margin-top:-100px" width="100px" height="100px" class="folium-map" id="map" ></div>
+<div class="container-fluid">
+    <div class="row">        
+        <div class="col-md-12">                        
+             <div class="folium-map" id="map" >
+             </div>
+        </div>       
+ </div>
+ <div class="row">        
+        <div class="col-md-6">                        
+             <div class="page-header">
+                <h1>COVIT-19 FAQ:<small></h1>
+            </div>
+        </div>    
+        <div class="col-md-6">                        
+             <div class="page-header">
+                <h1>COVIT-19 Contact Information:<small></h1>
+            </div>
+        </div>        
+ </div>
+</div>
+
         
           
         
@@ -136,9 +154,10 @@ function colorPicker(min, max){
                 {
                     center: [52.520008, 13.404954],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 11,
                     zoomControl: true,
                     preferCanvas: false,
+                    scrollWheelZoom: false
                 }
             );
 
@@ -148,7 +167,7 @@ function colorPicker(min, max){
     
             var tile_layer_0194d191ecb848098591cb487f3e3c64 = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
-                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 10, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+                {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 10, "maxZoom": 11, "minZoom":10, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
             ).addTo(map);
         
     
